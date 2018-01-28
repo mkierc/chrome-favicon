@@ -2,7 +2,7 @@ import base64
 import sys
 
 if len(sys.argv) != 3:
-    print 'Usage: bookmark.py <icon-filename> <website-address>'
+    print('Usage: bookmark.py <icon-filename> <website-address>')
 else:
     icon_filename = sys.argv[1]
     url = sys.argv[2]
@@ -15,4 +15,4 @@ else:
     infix = '" type="image/png" /></head><body><script>window.location.href="'
     suffix = '";</script></body></html>'
 
-    print metatype + base64.b64encode(prefix + encoded_image + infix + url + suffix)
+    print(metatype + base64.b64encode(prefix + encoded_image + infix + url + suffix))
